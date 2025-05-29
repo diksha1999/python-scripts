@@ -3,7 +3,7 @@ import sys # To help determine the OS for the command
 
 def main():
     # Determine the command based on the operating system
-    if sys.platform.startswith('win'):
+    if sys.platform.lower().startswith('win'):
         command = ['dir']
     else: # For Linux, macOS, etc.
         command = ['ls', '-l']
@@ -34,3 +34,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+print(sys.version_info)
